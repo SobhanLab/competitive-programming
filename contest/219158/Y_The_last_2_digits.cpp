@@ -1,18 +1,19 @@
-#include <bits/stdc++.h>
-using namespace std;
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int main() {
+        long long a, b, c, d;
+        cin >> a >> b >> c >> d;
 
-int main() {
-    long long a, b, c, d;
-    cin >> a >> b >> c >> d;
+        a %= 100;
+        b %= 100;
+        c %= 100;
+        d %= 100;
+     
+        long long total = a * b * c * d;
 
-    long long result = 1;
-
-    result = (result * a) % 100;
-    result = (result * b) % 100;
-    result = (result * c) % 100;
-    result = (result * d) % 100;
-
-    cout << result << endl;
-
-    return 0;
-}
+        if(total % 100 <=9) cout << 0;
+        cout << total % 100 << endl;
+     
+        return 0;
+    }
